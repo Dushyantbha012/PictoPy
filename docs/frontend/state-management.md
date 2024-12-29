@@ -84,7 +84,7 @@ Example from `AlbumsView`:
 ```javascript
 <AlbumList
   albums={transformedAlbums}
-  albumsPerRow={3}
+
   onAlbumClick={handleAlbumClick}
   onEditAlbum={(albumId) => {
     const album = albums.find((a) => a.album_name === albumId);

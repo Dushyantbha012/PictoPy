@@ -58,7 +58,7 @@ export default function MediaGallery({
         {/* Title and SortingControls */}
         <MediaGrid
           mediaItems={currentItems}
-          itemsPerRow={itemsPerRow}
+          
           openMediaViewer={openMediaViewer}
           type={type}
         />
@@ -92,7 +92,7 @@ Renders a grid of MediaCard components.
 ```jsx
 <MediaGrid
   mediaItems={currentItems}
-  itemsPerRow={3}
+
   openMediaViewer={openMediaViewer}
   type="image"
 />
@@ -103,7 +103,7 @@ Renders a grid of MediaCard components.
 ```jsx
 export default function MediaGrid({
   mediaItems,
-  itemsPerRow,
+  
   openMediaViewer,
   type,
 }: MediaGridProps) {

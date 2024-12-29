@@ -5,13 +5,13 @@ import MediaGrid from '../Media/Mediagrid';
 import { MediaGalleryProps } from '@/types/Media';
 import MediaView from '../Media/MediaView';
 import PaginationControls from '../ui/PaginationControls';
-import { queryClient, usePictoQuery } from '@/hooks/useQueryExtensio';
+import { usePictoQuery } from '@/hooks/useQueryExtensio';
 import { getAllImageObjects } from '../../../api/api-functions/images';
 
 export default function AIGallery({
   title,
   type,
-  folderPath,
+  
 }: MediaGalleryProps & { folderPath: string }) {
   const { successData: mediaItems, isLoading: loading } = usePictoQuery({
     queryFn: getAllImageObjects,
@@ -25,7 +25,7 @@ export default function AIGallery({
   const [isVisibleSelectedImage, setIsVisibleSelectedImage] =
     useState<boolean>(true);
   const itemsPerPage: number = 20;
-  const itemsPerRow: number = 3;
+
 
   const filteredMediaItems = useMemo(() => {
     return filterTag
@@ -76,7 +76,7 @@ export default function AIGallery({
           <>
             <MediaGrid
               mediaItems={currentItems}
-              itemsPerRow={itemsPerRow}
+              
               openMediaViewer={openMediaViewer}
               type={type}
             />

@@ -2,8 +2,7 @@ import { MediaGridProps } from '@/types/Media';
 import MediaCard from './MediaCard';
 
 export default function MediaGrid({
-  mediaItems,
-  itemsPerRow,
+  mediaItems,  
   openMediaViewer,
   type,
 }: MediaGridProps) {
